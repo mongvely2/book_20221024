@@ -11,6 +11,7 @@
     <title>index</title>
 </head>
 <body>
-  <a href="/save">도서등록 요청</a>
+     <a href="/save">도서등록 요청</a>
+    <a href="/findBook">2번책 조회</a>
 </body>
 </html>

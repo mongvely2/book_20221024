@@ -32,4 +32,12 @@ public class BookController {
         }
     }
 
+    @GetMapping("/findBook")
+    public String findBook(Model model) {
+//      특정 책 제목에 대한 전체 정보가 필요하기 때문에 DTO에서 정보를 가져온다
+        BookDTO findResult = bookService.findBook();
+        model.addAttribute("book", findResult);
+        return "findBook";
+    }
+
 }

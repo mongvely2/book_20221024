@@ -14,4 +14,9 @@ public class BookRepository {
     public int save(BookDTO bookDTO) {
         return sql.insert("Book.save", bookDTO);
     }
+
+    public BookDTO findBook() {
+//        전달할게 없으므로 별도의 매개변수는 없어도 됨
+        return sql.selectOne("Book.findBook");
+    }
 }

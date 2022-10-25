@@ -8,4 +8,9 @@
         insert into book_table(bookName, bookAuthor, bookPrice, bookPublisher)
         values (#{bookName}, #{bookAuthor}, #{bookPrice}, #{bookPublisher})
     </insert>
+
+<!--    넘겨받은(줄)게 없기에 파라미터 타입 없어도 됨-->
+    <select id="findBook" resultType="book">
+        select * from book_table where bookId=2
+    </select>
 </mapper>
